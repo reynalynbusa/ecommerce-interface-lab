@@ -1,0 +1,127 @@
+:root {
+  --primary-color: #34495e;
+  --accent-color: #43950f;
+  --bg-light: #f8f9fa;
+  --text-main: #2d3436;
+  --success-color: #2ecc71;
+  --error-color: #c0392b;
+}
+
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.5;
+  margin: 25px;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: color 0.3s ease, background-color 0.3s ease;
+  display: inline-block;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+input:focus, button:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+article {
+  display: inline-block;
+  width: 240px;
+  padding: 12px;
+  margin: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #ffffff;
+  vertical-align: top;
+}
+
+article:nth-child(even) {
+  background-color: #f1f2f6;
+}
+
+
+.cart-container:empty {
+  display: block;
+  height: 180px;
+  border: 2px dashed #ccc;
+  background-color: #fdfdfd;
+}
+
+
+.price::before {
+  content: "₱";
+  margin-right: 2px;
+  color: var(--primary-color);
+}
+
+input:required {
+  border: 2px solid var(--error-color);
+}
+
+input:valid {
+  border: 2px solid var(--success-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td:first-child,
+th:first-child {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+li::marker {
+  color: var(--accent-color);
+}
+
+blockquote {
+  font-style: italic;
+  position: relative;
+  padding: 10px;
+}
+
+blockquote::before {
+  content: "“";
+  color: var(--accent-color);
+  font-size: 1.8em;
+}
+
+blockquote::after {
+  content: "”";
+  color: var(--accent-color);
+  font-size: 1.8em;
+}
+
