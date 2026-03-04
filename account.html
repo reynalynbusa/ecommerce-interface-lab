@@ -1,46 +1,59 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account | Dew & Bloom</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Welcome, Reynalyn </h1>
-    </header>
+        <h1>Welcome, Reynalyn</h1>
         <nav>
-      <ul>
-        <li><a href="orders.html">Order History</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="cart.html">Wishlist</a></li>
-      </ul>
-    </nav>
-     <section>
-            <h2>Previous Purchases</h2>
+            <ul>
+                <li><a href="orders.html">Order History</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="cart.html">Wishlist</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <details>
-                <summary>Jan. 09, 2026 | ₱250.00 | Delivered</summary>
-                <p>Radiance Vitamin C Serum — ₱250.00</p>
+    <main class="main-container">
+        <section class="order-history" style="animation: fadeIn 0.8s ease-out;">
+            <h2 style="margin-bottom: 20px;">Previous Purchases</h2>
+
+            <details class="product-card" style="text-align: left; margin-bottom: 15px; cursor: pointer;">
+                <summary style="font-weight: bold; padding: 10px;">
+                    Jan. 09, 2026 | ₱250.00 | <span style="color: green;">Delivered</span>
+                </summary>
+                <div style="padding: 15px; border-top: 1px solid #eee;">
+                    <p>Radiance Vitamin C Serum — ₱250.00</p>
+                </div>
             </details>
 
-            <details>
-                <summary>Jan. 30, 2026 | ₱339.00 | Delivered</summary>
-                <p>Gentle Foam Cleanser — ₱150.00</p>
-                <p>Under-Eye Repair Cream — ₱189.00</p>
+            <details class="product-card" style="text-align: left; margin-bottom: 15px; cursor: pointer;">
+                <summary style="font-weight: bold; padding: 10px;">
+                    Jan. 30, 2026 | ₱339.00 | <span style="color: green;">Delivered</span>
+                </summary>
+                <div style="padding: 15px; border-top: 1px solid #eee;">
+                    <p>Gentle Foam Cleanser — ₱150.00</p>
+                    <p>Under-Eye Repair Cream — ₱189.00</p>
+                </div>
             </details>
 
-            <details>
-                <summary>Feb. 13, 2026 | ₱450.00 | Processing</summary>
-                <p>Radiance Vitamin C Serum — ₱250.00</p>
-                <p>HydraGlow Hyaluronic Cream — ₱200.00</p>
+            <details class="product-card" style="text-align: left; margin-bottom: 15px; cursor: pointer;">
+                <summary style="font-weight: bold; padding: 10px;">
+                    Feb. 13, 2026 | ₱450.00 | <span style="color: orange;">Processing</span>
+                </summary>
+                <div style="padding: 15px; border-top: 1px solid #eee;">
+                    <p>Radiance Vitamin C Serum — ₱250.00</p>
+                    <p>HydraGlow Hyaluronic Cream — ₱200.00</p>
+                </div>
             </details>
 
         </section>
+    </main>
 
-
-
-   
 </body>
 </html>

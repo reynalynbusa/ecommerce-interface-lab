@@ -1,127 +1,227 @@
+/* TASK 1: THE RESPONSIVE FOUNDATION */
 :root {
-  --primary-color: #34495e;
-  --accent-color: #43950f;
-  --bg-light: #f8f9fa;
-  --text-main: #2d3436;
-  --success-color: #2ecc71;
-  --error-color: #c0392b;
+    --bg-soft-blush: #FFF0F5;
+    --header-dusty-rose: #e38dbf;
+    --accent-berry: #C71585;
+    --accent-deep-rose: #880E4F;
+    --border-pink: #F8BBD0;
+    --card-white: #ffffff;
+    --text-main: #4A4A4A;
+    --text-light: #ffffff;
+    
+    --transition-standard: 0.3s ease;
+}
+/* TASK 5: RESPONSIVE MEDIA */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-main);
-  line-height: 1.5;
-  margin: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-soft-blush);
+    color: var(--text-main);
 }
 
-h1, h2, h3 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: var(--primary-color);
-  font-weight: 700;
+img {
+    /* Task 5: Fluid Images */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
 }
 
-a {
-  text-decoration: none;
-  color: var(--accent-color);
-  transition: color 0.3s ease, background-color 0.3s ease;
-  display: inline-block;
-}
-
-button {
-  padding: 8px 14px;
-  border: none;
-  background-color: var(--primary-color);
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+a { 
+    text-decoration: none; 
+    color: inherit; 
+    transition: color var(--transition-standard);
 }
 
 a:hover {
-  color: var(--primary-color);
-  text-decoration: underline;
+    color: var(--accent-berry); 
 }
-
-button:hover {
-  background-color: var(--accent-color);
-}
-
-button:active {
-  transform: scale(0.96);
-}
-
-input:focus, button:focus {
-  outline: 2px solid var(--accent-color);
-}
-
-article {
-  display: inline-block;
-  width: 240px;
-  padding: 12px;
-  margin: 8px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background-color: #ffffff;
-  vertical-align: top;
-}
-
-article:nth-child(even) {
-  background-color: #f1f2f6;
-}
-
-
-.cart-container:empty {
-  display: block;
-  height: 180px;
-  border: 2px dashed #ccc;
-  background-color: #fdfdfd;
-}
-
-
-.price::before {
-  content: "₱";
-  margin-right: 2px;
-  color: var(--primary-color);
-}
-
-input:required {
-  border: 2px solid var(--error-color);
-}
-
-input:valid {
-  border: 2px solid var(--success-color);
+/* TASK 5: RESPONSIVE TABLES */
+.table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+    background: var(--card-white);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-pink);
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
-td:first-child,
-th:first-child {
-  font-weight: bold;
-  color: var(--primary-color);
+th {
+    background-color: #FCE4EC; 
+    padding: 12px;
 }
 
-li::marker {
-  color: var(--accent-color);
+td {
+    padding: 10px;
+    border-bottom: 1px solid #FCE4EC;
 }
 
-blockquote {
-  font-style: italic;
-  position: relative;
-  padding: 10px;
+/* TASK 2: NAVIGATION & HEADER */
+header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 1.5rem;
+    background: var(--header-dusty-rose); 
+    color: var(--text-light);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-blockquote::before {
-  content: "“";
-  color: var(--accent-color);
-  font-size: 1.8em;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-top: 15px;
 }
 
-blockquote::after {
-  content: "”";
-  color: var(--accent-color);
-  font-size: 1.8em;
+nav ul li a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 45vh;
+    padding: 30px;
+    background: linear-gradient(135deg, #FCE4EC 0%, var(--border-pink) 100%);
+    animation: slideUp 1s ease-out;
+}
+
+.hero h1 {
+    color: var(--accent-deep-rose);
+    margin-bottom: 10px;
+}
+/* TASK 6: ADVANCED LAYOUT */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+/* TASK 3: THE PRODUCT GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background: var(--card-white);
+    padding: 20px;
+    border: 1px solid var(--border-pink);
+    border-radius: 12px;
+    text-align: center;
+    transition: transform var(--transition-standard);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #DDA0DD;
+}
+
+.product-card h3 {
+    margin: 15px 0 5px;
+    color: var(--accent-berry);
+}
+  /* Task 4: Cart Items */
+.cart-list { list-style: none; }
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--card-white);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #DDA0DD;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* TASK 1: TABLET BREAKPOINT */
+@media (min-width: 481px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 769px) {
+    /* Task 2: Header Horizontal Layout */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.2rem 8%;
+    }
+    /* Task 6: Desktop Sidebar (25/75 Split) */
+    .main-container {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 40px;
+        padding: 40px 8%;
+    }
+/* Task 3: 4-column product grid */
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+/* Task 4: Checkout Side-by-Side */
+    .checkout-layout {
+        display: flex;
+        gap: 50px;
+        align-items: flex-start;
+    }
+    .shipping-section { flex: 2; }
+    .summary-section { 
+        flex: 1; 
+        background: var(--card-white); 
+        padding: 25px; 
+        border-radius: 12px; 
+        border: 1px solid var(--border-pink);
+    }
+}
+/* TASK 7: ENHANCING INTERACTIVITY */
+button, .shop-btn, input[type="submit"] {
+    background-color: var(--accent-berry); 
+    color: var(--text-light);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background var(--transition-standard);
+}
+
+button:hover, .shop-btn:hover, input[type="submit"]:hover {
+    background-color: var(--accent-deep-rose);
+    animation: pulse 0.6s infinite ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}

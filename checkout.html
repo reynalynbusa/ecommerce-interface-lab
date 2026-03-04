@@ -2,57 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>checkout</title>
-     <link rel="stylesheet" href="style.css">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
-    <h2>Shipping</h2>
+    <main class="main-container checkout-layout">
+        <section class="shipping-section">
+            <h2>Shipping Details</h2>
+            <form>
+                <fieldset style="padding: 15px; border: 1px solid #ddd;">
+                    <legend>Address</legend>
+                    <label>Full Name:</label><br>
+                    <input type="text" required style="width:100%;"><br><br>
+                    <label>Street:</label><br>
+                    <input type="text" required style="width:100%;">
+                </fieldset>
+                <br>
+                <button type="submit" style="padding: 10px 20px;">Place Order</button>
+            </form>
+        </section>
 
-    <form action="#" method="post">
-
-        <fieldset>
-            <legend>Shipping Address</legend>
-
-            <label>Full Name:</label><br>
-            <input type="text" name="fullname" required><br><br>
-
-            <label>Street Address:</label><br>
-            <input type="text" name="street" required><br><br>
-
-            <label>Zip Code:</label><br>
-            <input type="text" name="zipcode" required><br>
-        </fieldset>
-
-        <br>
-
-        <h2>Payment Method</h2>
-
-        <label>
-            <input type="radio" name="payment" value="creditcard" required>
-            Credit Card
-        </label>
-
-        <label>
-            <input type="radio" name="payment" value="paypal">
-            PayPal
-        </label>
-
-        <br><br>
-
-      
-
-    </form>
-</section>
-
-<aside>
-    <h2>Order Summary</h2>
-    <p>Items: ₱450.00</p>
-    <p>Shipping: ₱50.00</p>
-    <p><strong>Total: ₱500.00</strong></p>
-</aside>
-
-  <button type="submit">Place Order</button>
+        <aside class="summary-section" style="background:#fff; padding: 20px; border: 1px solid #eee;">
+            <h2>Order Summary</h2>
+            <p>Items: ₱450.00</p>
+            <p>Shipping: ₱50.00</p>
+            <hr><br>
+            <p><strong>Total: ₱500.00</strong></p>
+        </aside>
+    </main>
 </body>
 </html>

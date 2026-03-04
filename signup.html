@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<form action="#" method="post">
-
-    <label for="name">Full Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
-
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password" required><br><br>
-
-    <input type="submit" value="Submit">
-
-    </form>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Dew & Bloom</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Dew & Bloom</h1>
+        <nav>
+            <ul>
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section style="max-width: 400px; margin: 40px auto; background: white; padding: 30px; border-radius: 8px; border: 1px solid #eee; animation: fadeIn 0.8s ease-out;">
+            <h2 style="margin-bottom: 20px;">Create Account</h2>
+            
+            <form action="#" method="post">
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 8px 0 20px 0; border: 1px solid #ccc; border-radius: 4px;">
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 8px 0 20px 0; border: 1px solid #ccc; border-radius: 4px;">
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required style="width: 100%; padding: 10px; margin: 8px 0 20px 0; border: 1px solid #ccc; border-radius: 4px;">
+
+                <input type="submit" value="Sign Up" style="width: 100%; background-color: #333; color: white; padding: 12px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+            </form>
+            
+            <p style="text-align: center; margin-top: 15px; font-size: 0.9em;">
+                Already have an account? <a href="#" style="color: #d4a373;">Login here</a>
+            </p>
+        </section>
+    </main>
 </body>
 </html>
