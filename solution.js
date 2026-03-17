@@ -1,12 +1,13 @@
-// Problem 2: Secure ID Generator
-function generateIDs(count) {
-  const ids = [];
-  for (let i = 0; i < count; i++) {
-    // Skip the number 5 as per constraints
-    if (i === 5) {
-      continue;
+// Problem 6: Robust Division
+function safeDivide(a, b) {
+  try {
+    if (b === 0) {
+      throw new Error("Cannot divide by zero");
     }
-    ids.push(ID-${i});
+    return a / b;
+  } catch (error) {
+    return error.message;
+  } finally {
+    console.log("Operation attempted");
   }
-  return ids;
 }
