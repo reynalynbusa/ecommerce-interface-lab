@@ -1,13 +1,8 @@
-// Problem 6: Robust Division
-function safeDivide(a, b) {
-  try {
-    if (b === 0) {
-      throw new Error("Cannot divide by zero");
-    }
-    return a / b;
-  } catch (error) {
-    return error.message;
-  } finally {
-    console.log("Operation attempted");
-  }
+// Problem 4: Leaderboard Filter
+
+function getTopScorers(playerList) {
+  return playerList
+    .filter(player => player.score >8)
+    .map(player => player.name)
+    .join(", ");
 }
